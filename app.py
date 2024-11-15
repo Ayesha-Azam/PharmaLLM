@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load the model and tokenizer
-model_path = "m-faraz-ali/my-llm"
+model_path = ""
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto", torch_dtype='auto').eval()
 
